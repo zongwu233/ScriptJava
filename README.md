@@ -86,10 +86,20 @@ Before launching the executable make sure, that there is `javac` in the system P
 
 
 ## Building
-The main project has no dependencies, so it's a straight-forward process. However, building from IDE (when project is created from the source code)
-won't work, as current functionality requires the project's jar in the execution directory (due to build-in imports & IScript)
+The main project has no dependencies, so it's a straight-forward process. 
 
 Tests require `Gson` (for json testing)
+
+build with ant :
+
+```bash
+git clone https://github.com/noties/ScriptJava.git
+cd ScriptJava
+ant install
+java -jar ScriptJava.ja
+```
+
+enjoy it~
 
 
 ## License

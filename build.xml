@@ -1,0 +1,28 @@
+<project default="jar">
+    <property name="build" location="build"/>
+    <property name="classesdir" location="${build}/classes"/>
+    <property name="jardir" location="${build}/jar"/>
+    <property name="libdir" location="libs"/>
+    <property name="destjar" location="${jardir}/ScriptJava.jar"/>
+
+	<target name="clean">
+        <delete dir="${build}"/>
+        <delete dir="${libdir}"/>
+    </target>  
+    <target name="compile">
+        <mkdir dir="${classesdir}"/>
+        <javac srcdir="src" destdir="${classesdir}"/>
+    </target>
+     <target name="jar" depends="compile" >
+        <mkdir dir="${jardir}"/>
+        <jar destfile="${destjar}" basedir="${classesdir}">
+            <manifest>
+                <attribute name="Main-Class" value="scriptjava.Main"/>
+            </manifest>
+        </jar>
+    </target>
+    <target name="install" depends="jar">
+        <mkdir dir="${libdir}"/>
+        <copy file="${destjar}" todir="${libdir}"/>
+    </target>
+</project>
