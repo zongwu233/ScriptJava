@@ -16,3 +16,5 @@
 
 /out/
 /binary/.cache/
+
+.scriptjava/
