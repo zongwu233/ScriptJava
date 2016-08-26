@@ -96,7 +96,7 @@ build with ant :
 git clone https://github.com/noties/ScriptJava.git
 cd ScriptJava
 ant install
-java -jar ScriptJava.ja
+java -jar build/jar/ScriptJava.jar
 ```
 
 enjoy it~
